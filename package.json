@@ -1,0 +1,29 @@
+{
+  "name": "health-ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.26.0",
+  "engines": {
+    "node": ">=22.12.0 <23",
+    "pnpm": ">=10 <11"
+  },
+  "scripts": {
+    "dev:web": "pnpm --filter @health-ai/web dev",
+    "dev:server": "pnpm --filter @health-ai/server dev",
+    "typecheck": "pnpm -r typecheck",
+    "build": "pnpm typecheck && pnpm --filter @health-ai/web build",
+    "start:server": "pnpm --filter @health-ai/server start",
+    "check:scaffold": "node scripts/check-scaffold.mjs",
+    "test": "pnpm --filter @health-ai/server test",
+    "verify:p1": "pnpm check:scaffold && pnpm test && pnpm build && pnpm --filter @health-ai/server exec node --import tsx ../../scripts/verify-p1.mjs",
+    "test:provider": "pnpm --filter @health-ai/server test:provider",
+    "verify:p4": "pnpm test && pnpm build && pnpm --filter @health-ai/server exec node --import tsx ../../scripts/verify-p4.ts",
+    "verify:p5": "pnpm test && pnpm build && pnpm --filter @health-ai/server exec node --import tsx ../../scripts/verify-p5.ts",
+    "verify:p6": "pnpm check:scaffold && pnpm install --offline --frozen-lockfile --lockfile-only --ignore-scripts && pnpm test && pnpm build && pnpm --filter @health-ai/server exec node --import tsx ../../scripts/verify-p6.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
