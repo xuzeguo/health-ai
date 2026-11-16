@@ -16,6 +16,7 @@ docs/provider-smoke-result.json
 docs/p4-smoke-result.json
 docs/p5-smoke-result.json
 docs/p6-smoke-result.json
+docs/phase2-p0-smoke-result.json
 # Local databases/backups and credential files, including files outside data/.
 *.db
 *.db-wal

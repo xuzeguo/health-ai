@@ -18,6 +18,8 @@
     "zod": "^4.0.0"
   },
   "devDependencies": {
+    "@langchain/core": "1.4.1",
+    "@langchain/openai": "1.8.4",
     "@types/better-sqlite3": "^7.6.0",
     "tsx": "^4.0.0"
   }
