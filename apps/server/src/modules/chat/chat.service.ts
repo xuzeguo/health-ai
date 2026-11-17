@@ -64,7 +64,12 @@ export class ChatService {
     if (this.active.has(conversationId)) throw new AppError('CONVERSATION_BUSY');
     if (!this.options.provider) throw new AppError('CONFIG_ERROR');
     // Synchronous through reservation and atomic insert: no await race window.
-    const messages = this.repository.createTurn(conversationId, content, this.options.model ?? 'deepseek-flash');
+    let messages: ReturnType<ChatRepository['createTurn']>;
+    try {
+      messages = this.repository.createTurn(conversationId, content, this.options.model ?? 'deepseek-flash');
+    } catch (error) {
+      throw error;
+    }
     let resolve!: () => void;
     const settled = new Promise<void>((done) => { resolve = done; });
     const turn = { conversationId, ...messages, controller: new AbortController(), settled, resolve };

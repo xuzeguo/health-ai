@@ -1,5 +1,7 @@
 # HealthAI 当前进度临时上下文
 
+> 当前路线已重设为 AI 技术学习项目：以 `docs/PHASE2_LEARNING_PLAN.md` 为唯一有效二期计划。OCR、健康报告产品和通用 workflow 不再是必做范围。
+
 更新时间：2026-11-17，Asia/Shanghai。工作区：`/Users/guoxuze/Documents/myproject/health-ai`。
 
 ## 1. 第一优先级：当前暂停，不得自动开始P1
@@ -67,15 +69,15 @@ P0累计**47次真实API请求**，阶段预算上限50：原生6＋LangChain/�
 | 用途 | 文件 |
 | --- | --- |
 | 本次交接入口 | `docs/CURRENT_PROGRESS_TEMP.md` |
-| 一期契约及最小上下文 | `docs/NEXT_PHASE_CONTEXT.md`、`docs/PHASE1_DEVELOPMENT.md` |
-| 二期需求 | `docs/PHASE2_REQUIREMENTS.md` |
-| 二期技术设计 | `docs/PHASE2_TECHNICAL_DESIGN.md` |
-| 阶段计划/工时/Token | `docs/PHASE2_DEVELOPMENT_PLAN.md` |
-| 开发前测试条件 | `docs/PHASE2_TEST_PLAN.md` |
-| 评审修订对照 | `docs/PHASE2_REVIEW_AND_PLAN.md` |
-| P0开工前实验条件 | `docs/PHASE2_P0_EXECUTION.md` |
-| P0最终阶段报告 | `docs/PHASE2_P0_STATUS.md` |
-| ADR与选型限制 | `docs/PHASE2_DECISIONS.md` |
+| 一期契约及最小上下文 | `docs/NEXT_PHASE_CONTEXT.md`、`docs/reference/PHASE1_DEVELOPMENT.md` |
+| 二期需求 | `docs/archive/phase2-product-route/PHASE2_REQUIREMENTS.md` |
+| 二期技术设计 | `docs/archive/phase2-product-route/PHASE2_TECHNICAL_DESIGN.md` |
+| 阶段计划/工时/Token | `docs/archive/phase2-product-route/PHASE2_DEVELOPMENT_PLAN.md` |
+| 开发前测试条件 | `docs/archive/phase2-product-route/PHASE2_TEST_PLAN.md` |
+| 评审修订对照 | `docs/archive/phase2-product-route/PHASE2_REVIEW_AND_PLAN.md` |
+| P0开工前实验条件 | `docs/archive/phase2-p0/PHASE2_P0_EXECUTION.md` |
+| P0最终阶段报告 | `docs/archive/phase2-p0/PHASE2_P0_STATUS.md` |
+| ADR与选型限制 | `docs/archive/phase2-product-route/PHASE2_DECISIONS.md` |
 | P0安全结果文件 | `docs/phase2-p0-smoke-result.json`，Git忽略、0600；勿打印整份内容 |
 | P0源码 | `apps/server/experiments/phase2-p0/` |
 | P0离线测试 | `apps/server/test/phase2-p0.test.ts`、`phase2-vector.test.ts` |

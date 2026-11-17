@@ -18,7 +18,7 @@
 | T0-10审计 | 报告0600；禁止raw字段不存在；模型Key未出现在报告和3个构建产物中；usage/source hash记录完整或明确缺失 |
 | 累计离线验证 | 117/117测试，pnpm build含类型检查通过；0 skipped |
 
-选型细节及重新评估条件见 `PHASE2_DECISIONS.md`。当前只支持macOS本机候选路径，不承诺任意设备报告或跨平台运行。首批输入选择单张PNG/JPEG；P0实际验证PNG，JPEG需在P2上传测试中用同一路径验证后方可开放。PDF不在首版首批支持列表。
+选型细节及重新评估条件见 `archive/phase2-product-route/PHASE2_DECISIONS.md`。当前只支持macOS本机候选路径，不承诺任意设备报告或跨平台运行。首批输入选择单张PNG/JPEG；P0实际验证PNG，JPEG需在P2上传测试中用同一路径验证后方可开放。PDF不在首版首批支持列表。
 
 ## 检索失败与修复
 

@@ -1,5 +1,7 @@
 # Feature 02 技术决策记录
 
+> 历史决策记录。当前范围和实体取舍以 [`PHASE2_LEARNING_PLAN.md`](../../PHASE2_LEARNING_PLAN.md) 为准；OCR 与产品化 workflow 不属于当前必做方向。
+
 日期：2026-11-17。基于F02-P0实际实验；仅适用于当前macOS本机单用户原型。通过能力验证不代表最终产品已交付。
 
 ## ADR-001：结构化输出

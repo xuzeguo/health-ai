@@ -2,7 +2,7 @@
 
 基线日期：2026-11-15。项目目录：`health-ai/`。本文描述已经实现并验收的代码；用于理解技术细节及下一阶段维护，不新增需求。
 
-快速接续开发先读 [NEXT_PHASE_CONTEXT.md](NEXT_PHASE_CONTEXT.md)；按需回到本文。执行历史见 [WORK_PLAN.md](../WORK_PLAN.md)，逐项验收见 [ACCEPTANCE.md](ACCEPTANCE.md)，设计取舍见 [DECISIONS.md](DECISIONS.md)。
+快速接续开发先读 [NEXT_PHASE_CONTEXT.md](../NEXT_PHASE_CONTEXT.md)；按需回到本文。执行历史见 [WORK_PLAN.md](../../WORK_PLAN.md)，逐项验收见 [ACCEPTANCE.md](../archive/phase1-validation/ACCEPTANCE.md)，设计取舍见 [DECISIONS.md](DECISIONS.md)。
 
 ## 1. 交付范围与基线
 

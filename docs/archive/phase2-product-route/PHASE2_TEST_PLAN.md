@@ -1,5 +1,7 @@
 # HealthAI 二期开发前测试条件与阶段测试计划
 
+> 历史测试计划：当前阶段门禁以 [`PHASE2_LEARNING_PLAN.md`](../../PHASE2_LEARNING_PLAN.md) 为准；本文的产品化 AC 矩阵不再自动扩大当前范围。
+
 - 文档编号：HAI-F02-TEST
 - 版本：1.2
 - 日期：2026-11-16
@@ -187,4 +189,4 @@
 
 ## 当前执行状态（2026-11-17）
 
-用户已授权“开始/继续”，原文审查前禁止开发的描述是历史门槛，现已满足。F02-P0选定的本地macOS路径验证通过，117项离线测试、类型/构建和报告审计通过；详见 `docs/PHASE2_P0_STATUS.md`、`docs/PHASE2_DECISIONS.md`。初步选型为macOS Vision OCR、NaturalLanguage中文640维Embedding、SQLite小库精确向量检索、DeepSeek JSON与LangChain。只有合成工程样本，生产质量和业务AC留给P1–P6验证。后续阶段继续先测试条件、后实现、严格通过测试门槛，不自动提交推送。
+用户已授权“开始/继续”，原文审查前禁止开发的描述是历史门槛，现已满足。F02-P0选定的本地macOS路径验证通过，117项离线测试、类型/构建和报告审计通过；详见 `docs/archive/phase2-p0/PHASE2_P0_STATUS.md`、`docs/archive/phase2-product-route/PHASE2_DECISIONS.md`。初步选型为macOS Vision OCR、NaturalLanguage中文640维Embedding、SQLite小库精确向量检索、DeepSeek JSON与LangChain。只有合成工程样本，生产质量和业务AC留给P1–P6验证。后续阶段继续先测试条件、后实现、严格通过测试门槛，不自动提交推送。

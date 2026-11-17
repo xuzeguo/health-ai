@@ -8,7 +8,7 @@
 
 | 项目 | 结果 | 说明 |
 | --- | --- | --- |
-| 实施计划与规格记录 | 已创建并回读 | `WORK_PLAN.md`、`docs/DECISIONS.md` |
+| 实施计划与规格记录 | 已创建并回读 | `WORK_PLAN.md`、`docs/reference/DECISIONS.md` |
 | 独立 Git 仓库 | 通过 | `git init -b main`；未提交，也未修改全局 Git 配置 |
 | 工程结构检查 | 通过 | `node scripts/check-scaffold.mjs`；workspace 引用、shared 零依赖、必要路径和忽略规则 |
 | shared 类型检查 | 通过（临时已有工具） | 用相邻项目已存在的 TypeScript 5.9.3 执行 `tsc --noEmit -p packages/shared/tsconfig.json`；没有复制或修改该项目；完整项目安装后须以本项目编译器重验 |

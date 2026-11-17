@@ -1,15 +1,17 @@
 # 下一阶段最小上下文
 
-基线：一期工程 2026-11-15；二期文档状态更新 2026-11-16，仓库 `health-ai/`。用途：新会话优先读本文件，再按需读源码或 [一期开发文档](PHASE1_DEVELOPMENT.md)。这是项目快照，后续用户指令和实际代码变更优先。
+> 当前路线已在 2026-11-17 重设：请优先阅读 [`PHASE2_LEARNING_PLAN.md`](PHASE2_LEARNING_PLAN.md)。旧的产品化 P1–P6 计划和 OCR/报告 workflow 设计仅作历史参考，不作为当前开发指令。
+
+基线：一期工程 2026-11-15；二期文档状态更新 2026-11-16，仓库 `health-ai/`。用途：新会话优先读本文件，再按需读源码或 [一期开发文档](reference/PHASE1_DEVELOPMENT.md)。这是项目快照，后续用户指令和实际代码变更优先。
 
 ## 当前结论
 
 - **最新用户指令：暂停，先不要开始P1。** 当前仅生成交接文档，尚未开始P1代码、专属测试或执行规格；早先“开始/继续”不覆盖后来的暂停。下次优先读 [当前进度临时上下文](CURRENT_PROGRESS_TEMP.md)，等待用户明确恢复后才实施下一阶段。
 - 用户随后授权提交当前文档、P0实验与测试；该授权不包含推送或恢复P1。提交结果以Git实际记录为准，不因文档旧有“未提交”快照重复提交。
 - Feature 01 本机单进程桌面 Web 聊天 MVP 已交付：P0–P6、A01–A21 全部通过。
-- Feature 02 的“开始/继续”授权已被最新暂停指令收紧。**F02-P0已通过选定本地macOS路径；P1未开始，恢复后先细化测试条件再实现。** 先读 `docs/PHASE2_P0_STATUS.md`、`docs/PHASE2_DECISIONS.md`；真实实验位于 `apps/server/experiments/phase2-p0/`，不要重复已完成模型请求。选型：Vision OCR（Objective-C helper）、NaturalLanguage中文sentence embedding revision1/640维、SQLite小库精确向量扫描、DeepSeek JSON＋Zod、LangChain。原生Schema两次400不采用；无固定相似度阈值可可靠拒答，独立证据充分性判定10例通过。
+- Feature 02 的“开始/继续”授权已被最新暂停指令收紧。**F02-P0已通过选定本地macOS路径；P1未开始，恢复后先细化测试条件再实现。** 先读 `docs/archive/phase2-p0/PHASE2_P0_STATUS.md`、`docs/archive/phase2-product-route/PHASE2_DECISIONS.md`；真实实验位于 `apps/server/experiments/phase2-p0/`，不要重复已完成模型请求。选型：Vision OCR（Objective-C helper）、NaturalLanguage中文sentence embedding revision1/640维、SQLite小库精确向量扫描、DeepSeek JSON＋Zod、LangChain。原生Schema两次400不采用；无固定相似度阈值可可靠拒答，独立证据充分性判定10例通过。
 - P0累计47次真实API请求（上限50），已知usage输入9681/输出1232仅下界；20份合成文本、2张OCR图片、真实本地检索及最终模型引用链通过。仅工程样本，真实报告/语料质量留P2/P4；不是业务功能交付。P0报告Git忽略0600，保留失败历史。117/117离线测试、类型/build和报告隐私扫描通过。
-- 用户要求每阶段开发前写周全测试条件并严格放行，见 `docs/PHASE2_TEST_PLAN.md`。授权范围内pnpm直接运行，复用系统已有规则，仅sandbox强制时升级。不打印/覆盖.env，不操作真实健康DB，无自动Git提交/推送。LangChain暂为锁定实验devDependencies，helper仅用于macOS正常宿主；沙箱内系统模型可能不可用。
+- 用户要求每阶段开发前写周全测试条件并严格放行，见 `docs/archive/phase2-product-route/PHASE2_TEST_PLAN.md`。授权范围内pnpm直接运行，复用系统已有规则，仅sandbox强制时升级。不打印/覆盖.env，不操作真实健康DB，无自动Git提交/推送。LangChain暂为锁定实验devDependencies，helper仅用于macOS正常宿主；沙箱内系统模型可能不可用。
 - 105/105 测试、类型/生产构建、锁文件一致性通过。最终 P6：`2026-11-15T09:54:54.464Z`、passed:true/stage:complete、11 项、59 个源码哈希一致。真实模型与人工 UI 在 P2/P4/P5 已接受，无需重新配 Key 或重复验收。
 - 用户偏好：先生成计划，再逐项实现；授权范围内自主完成，减少反复确认。不要打印/覆盖已有 `.env` 或输出健康聊天正文；仅为用户授权的安全审计可在内存读取敏感值而不回显。用户已授权首次 Git 提交并推送到 xuzeguo/health-ai；执行结果以实际 Git 状态为准，不虚构 commit/tag 或推送成功。首次公开前检查见 PUBLISH_SECURITY.md。
 
@@ -45,7 +47,7 @@ shared exports TS 源码、零运行依赖、不单独构建。server 以 tsx �
 | DB/共享契约 | apps/server/src/database/*；packages/shared/src/* |
 | 前端状态/流解析 | apps/web/src/{composables/useChat.ts,api/chat.ts,composables/useSseParser.ts,stores/chat.ts} |
 | 视图/安全渲染 | apps/web/src/components/chat/*；utils/markdown.ts；composables/useAutoScroll.ts |
-| 验收事实 | docs/ACCEPTANCE.md；需排查历史时才读VALIDATION.md/WORK_PLAN.md |
+| 验收事实 | docs/archive/phase1-validation/ACCEPTANCE.md；需排查历史时才读VALIDATION.md/WORK_PLAN.md |
 
 ## 检查与环境经验
 
@@ -59,4 +61,4 @@ P6已验：4产物无合成Key、慢读停在13块/最大写缓冲65877字节、
 
 ## 新会话开场模板
 
-> 在 health-ai 继续开发。先读取 docs/NEXT_PHASE_CONTEXT.md；按本次任务再读相关源码，必要时查 docs/PHASE1_DEVELOPMENT.md。P0–P6 已验收完成，无需重复前期规划、安装或真实模型测试。本次目标是：【填写功能/约束/验收要求】。先给出可执行计划，再按计划实现和验证；同步更新受影响文档与本摘要，不输出密钥或聊天正文。
+> 在 health-ai 继续开发。先读取 docs/NEXT_PHASE_CONTEXT.md；按本次任务再读相关源码，必要时查 docs/reference/PHASE1_DEVELOPMENT.md。P0–P6 已验收完成，无需重复前期规划、安装或真实模型测试。本次目标是：【填写功能/约束/验收要求】。先给出可执行计划，再按计划实现和验证；同步更新受影响文档与本摘要，不输出密钥或聊天正文。

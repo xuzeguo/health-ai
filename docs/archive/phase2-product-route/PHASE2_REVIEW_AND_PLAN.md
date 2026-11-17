@@ -1,5 +1,7 @@
 # HealthAI 二期设计修订审查说明
 
+> 历史审查材料：当前二期方向以 [`PHASE2_LEARNING_PLAN.md`](../../PHASE2_LEARNING_PLAN.md) 为准。
+
 日期：2026-11-16。状态：修订完成，待用户审查；未开始二期实验或开发。
 
 ## 1. 审查入口
@@ -11,7 +13,7 @@
 3. [二期开发计划](PHASE2_DEVELOPMENT_PLAN.md)：F02-P0…P6任务、时间分解、Codex与应用模型token预算、退出条件。
 4. [开发前测试条件](PHASE2_TEST_PLAN.md)：七阶段测试矩阵、前置条件、预期、证据与严格放行规则。
 
-原始依据为坚果云目录内两份 v1.0 文档，以及 `docs/PHASE1_DEVELOPMENT.md`、`docs/NEXT_PHASE_CONTEXT.md`；同时核对当前Provider、ChatService、数据库、SSE和前端解码器。外部需求和技术文档同步为v1.2，配套增加独立开发计划；仓库保留对应副本，后续修改应同步，避免双份漂移。
+原始依据为坚果云目录内两份 v1.0 文档，以及 `docs/reference/PHASE1_DEVELOPMENT.md`、`docs/NEXT_PHASE_CONTEXT.md`；同时核对当前Provider、ChatService、数据库、SSE和前端解码器。外部需求和技术文档同步为v1.2，配套增加独立开发计划；仓库保留对应副本，后续修改应同步，避免双份漂移。
 
 ## 2. 缺陷与落实位置
 
@@ -51,4 +53,4 @@ v1.2进一步落实用户要求：开发前先写周全测试条件，每阶段�
 
 ## 当前执行状态（2026-11-17）
 
-用户已授权“开始/继续”，原文审查前禁止开发的描述是历史门槛，现已满足。F02-P0选定的本地macOS路径验证通过，117项离线测试、类型/构建和报告审计通过；详见 `docs/PHASE2_P0_STATUS.md`、`docs/PHASE2_DECISIONS.md`。初步选型为macOS Vision OCR、NaturalLanguage中文640维Embedding、SQLite小库精确向量检索、DeepSeek JSON与LangChain。只有合成工程样本，生产质量和业务AC留给P1–P6验证。后续阶段继续先测试条件、后实现、严格通过测试门槛，不自动提交推送。
+用户已授权“开始/继续”，原文审查前禁止开发的描述是历史门槛，现已满足。F02-P0选定的本地macOS路径验证通过，117项离线测试、类型/构建和报告审计通过；详见 `docs/archive/phase2-p0/PHASE2_P0_STATUS.md`、`docs/archive/phase2-product-route/PHASE2_DECISIONS.md`。初步选型为macOS Vision OCR、NaturalLanguage中文640维Embedding、SQLite小库精确向量检索、DeepSeek JSON与LangChain。只有合成工程样本，生产质量和业务AC留给P1–P6验证。后续阶段继续先测试条件、后实现、严格通过测试门槛，不自动提交推送。

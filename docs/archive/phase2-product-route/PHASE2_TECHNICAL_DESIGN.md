@@ -1,10 +1,12 @@
 # HealthAI 二期技术实现说明文档
 
+> 历史技术设计：当前技术路线以 [`PHASE2_LEARNING_PLAN.md`](../../PHASE2_LEARNING_PLAN.md) 为准。不要据此继续扩展通用 workflow、OCR 或复杂持久化实体。
+
 - 文档编号：HAI-F02-TECH
 - 版本：1.2（测试前置与估算配套修订）
 - 修订日期：2026-11-16
 - 状态：待用户审查；本文定义未来实现，不表示能力已验证
-- 配套文档：`docs/PHASE2_REQUIREMENTS.md`、`docs/PHASE2_DEVELOPMENT_PLAN.md`
+- 配套文档：`docs/archive/phase2-product-route/PHASE2_REQUIREMENTS.md`、`docs/archive/phase2-product-route/PHASE2_DEVELOPMENT_PLAN.md`
 
 ## 1. 架构与约束
 
@@ -277,14 +279,14 @@ Promise.race 仅用于及时收尾，底层请求仍需 signal 或终止子进�
 
 ADR 计划：001 JSON/schema；002报告识别；003Embedding；004向量存储与索引；005LangChain；006v2协议与恢复；007测量字段/时间/统计；008临时文件；009共享占位与关闭；010草稿版本及幂等；011上下文/超时/成本预算。文档决策与实测结论分别注明，不将“待验证”写成已采用成功。
 
-开发工时、依赖和审批点见 `docs/PHASE2_DEVELOPMENT_PLAN.md`。当前只修订文档，用户审查通过前不执行 P0 或业务开发。
+开发工时、依赖和审批点见 `docs/archive/phase2-product-route/PHASE2_DEVELOPMENT_PLAN.md`。当前只修订文档，用户审查通过前不执行 P0 或业务开发。
 
 ## 开发前测试与阶段放行要求（v1.2补充）
 
-严格执行 `docs/PHASE2_TEST_PLAN.md`：每阶段开发之前先冻结周全的测试条件、输入、预期、故障注入、隔离及证据要求；随后实现并执行测试。每阶段必须完成本阶段全部适用案例、累计全量离线测试、类型/构建及受影响真实能力/浏览器验证。必测失败或未执行不放行，先修复重测；不得等P6才集中补测。测试规格已在业务开发前独立编写，阶段开工前细化命令与fixtures，不将尚未执行的测试标为通过。
+严格执行 `docs/archive/phase2-product-route/PHASE2_TEST_PLAN.md`：每阶段开发之前先冻结周全的测试条件、输入、预期、故障注入、隔离及证据要求；随后实现并执行测试。每阶段必须完成本阶段全部适用案例、累计全量离线测试、类型/构建及受影响真实能力/浏览器验证。必测失败或未执行不放行，先修复重测；不得等P6才集中补测。测试规格已在业务开发前独立编写，阶段开工前细化命令与fixtures，不将尚未执行的测试标为通过。
 
 时间与Codex/应用模型token预算以开发计划v1.2为准；本轮仍待用户审查，不执行实验或开发。
 
 ## 当前执行状态（2026-11-17）
 
-用户已授权“开始/继续”，原文审查前禁止开发的描述是历史门槛，现已满足。F02-P0选定的本地macOS路径验证通过，117项离线测试、类型/构建和报告审计通过；详见 `docs/PHASE2_P0_STATUS.md`、`docs/PHASE2_DECISIONS.md`。初步选型为macOS Vision OCR、NaturalLanguage中文640维Embedding、SQLite小库精确向量检索、DeepSeek JSON与LangChain。只有合成工程样本，生产质量和业务AC留给P1–P6验证。后续阶段继续先测试条件、后实现、严格通过测试门槛，不自动提交推送。
+用户已授权“开始/继续”，原文审查前禁止开发的描述是历史门槛，现已满足。F02-P0选定的本地macOS路径验证通过，117项离线测试、类型/构建和报告审计通过；详见 `docs/archive/phase2-p0/PHASE2_P0_STATUS.md`、`docs/archive/phase2-product-route/PHASE2_DECISIONS.md`。初步选型为macOS Vision OCR、NaturalLanguage中文640维Embedding、SQLite小库精确向量检索、DeepSeek JSON与LangChain。只有合成工程样本，生产质量和业务AC留给P1–P6验证。后续阶段继续先测试条件、后实现、严格通过测试门槛，不自动提交推送。

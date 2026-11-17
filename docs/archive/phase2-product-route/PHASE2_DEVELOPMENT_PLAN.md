@@ -1,10 +1,12 @@
 # HealthAI 二期开发计划
 
+> 历史开发计划：当前计划以 [`PHASE2_LEARNING_PLAN.md`](../../PHASE2_LEARNING_PLAN.md) 为准。本文的 F02-P1…P6 产品化路线不再作为当前执行依据。
+
 - 文档编号：HAI-F02-PLAN
 - 版本：1.2（测试前置与用量估算修订）
 - 日期：2026-11-16
 - 状态：待用户审查，所有开发任务未开始
-- 范围基线：`docs/PHASE2_REQUIREMENTS.md` v1.2、`docs/PHASE2_TECHNICAL_DESIGN.md` v1.2；`docs/PHASE2_TEST_PLAN.md` v1.2
+- 范围基线：`docs/archive/phase2-product-route/PHASE2_REQUIREMENTS.md` v1.2、`docs/archive/phase2-product-route/PHASE2_TECHNICAL_DESIGN.md` v1.2；`docs/archive/phase2-product-route/PHASE2_TEST_PLAN.md` v1.2
 
 ## 1. 审查与执行边界
 
@@ -123,7 +125,7 @@
 
 ## 5. 验证纪律和审查材料
 
-严格执行 `docs/PHASE2_TEST_PLAN.md`：每阶段编码之前先完成测试条件和自动化案例准备；之后执行离线单元/契约→临时库/模拟供应商集成→必要真实抽样→受影响浏览器/网络/子进程验证。每阶段退出均执行累计全量`pnpm test`和`pnpm build`，不得只在最终阶段测试。必测失败、未执行、环境阻塞均不放行；先修复和重测，再进入下一阶段。新增二期验收脚本，不能将一期P6直接视为二期通过。
+严格执行 `docs/archive/phase2-product-route/PHASE2_TEST_PLAN.md`：每阶段编码之前先完成测试条件和自动化案例准备；之后执行离线单元/契约→临时库/模拟供应商集成→必要真实抽样→受影响浏览器/网络/子进程验证。每阶段退出均执行累计全量`pnpm test`和`pnpm build`，不得只在最终阶段测试。必测失败、未执行、环境阻塞均不放行；先修复和重测，再进入下一阶段。新增二期验收脚本，不能将一期P6直接视为二期通过。
 
 本次审查建议按顺序阅读需求、技术设计、本计划，重点确认：
 
@@ -196,4 +198,4 @@
 
 ## 当前执行状态（2026-11-17）
 
-用户已授权“开始/继续”，原文审查前禁止开发的描述是历史门槛，现已满足。F02-P0选定的本地macOS路径验证通过，117项离线测试、类型/构建和报告审计通过；详见 `docs/PHASE2_P0_STATUS.md`、`docs/PHASE2_DECISIONS.md`。初步选型为macOS Vision OCR、NaturalLanguage中文640维Embedding、SQLite小库精确向量检索、DeepSeek JSON与LangChain。只有合成工程样本，生产质量和业务AC留给P1–P6验证。后续阶段继续先测试条件、后实现、严格通过测试门槛，不自动提交推送。
+用户已授权“开始/继续”，原文审查前禁止开发的描述是历史门槛，现已满足。F02-P0选定的本地macOS路径验证通过，117项离线测试、类型/构建和报告审计通过；详见 `docs/archive/phase2-p0/PHASE2_P0_STATUS.md`、`docs/archive/phase2-product-route/PHASE2_DECISIONS.md`。初步选型为macOS Vision OCR、NaturalLanguage中文640维Embedding、SQLite小库精确向量检索、DeepSeek JSON与LangChain。只有合成工程样本，生产质量和业务AC留给P1–P6验证。后续阶段继续先测试条件、后实现、严格通过测试门槛，不自动提交推送。

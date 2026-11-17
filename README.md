@@ -1,12 +1,12 @@
 # HealthAI
 
-一期桌面 Web 聊天 MVP。技术栈与实施范围见 `docs/DECISIONS.md`，任务进度见 `WORK_PLAN.md`。
+一期桌面 Web 聊天 MVP。技术栈与实施范围见 `docs/reference/DECISIONS.md`，任务进度见 `WORK_PLAN.md`。
 
-了解实现请读[一期开发文档](docs/PHASE1_DEVELOPMENT.md)；下一阶段或新会话优先读[最小交接上下文](docs/NEXT_PHASE_CONTEXT.md)，再按任务读取源码，减少重复加载历史记录。
+文档总入口是 [docs/README.md](docs/README.md)；学习 AI 技术请先读[一期技术导引](docs/PHASE1_TECHNICAL_GUIDE.md)与[二期 AI 技术学习计划](docs/PHASE2_LEARNING_PLAN.md)，再按任务读取源码。
 
 ## 当前阶段
 
-一期 Feature 01 本地桌面 Web MVP 已实现并验收，P0–P6 全部通过。含真实五轮模型调用、用户确认的浏览器交互、105 项自动化测试、类型/生产构建及最终 P6 的 11 项 TCP/进程恢复/Chrome/安全检查；最终报告 59 个来源哈希核验一致。任务记录见 `WORK_PLAN.md`，A01–A21 证据见 `docs/ACCEPTANCE.md`。
+一期 Feature 01 本地桌面 Web MVP 已实现并验收，P0–P6 全部通过。含真实五轮模型调用、用户确认的浏览器交互、105 项自动化测试、类型/生产构建及最终 P6 的 11 项 TCP/进程恢复/Chrome/安全检查；最终报告 59 个来源哈希核验一致。任务记录见 `WORK_PLAN.md`，A01–A21 证据见 `docs/archive/phase1-validation/ACCEPTANCE.md`。
 
 ## 环境
 
@@ -158,4 +158,4 @@ macOS 自动寻找已安装的 Google Chrome，Linux 也检查常用 Chromium �
 
 成功最后输出 `passed:true`，并保存 `docs/p6-smoke-result.json`（已 gitignore，含来源哈希、检查名、数值指标，不包含密钥/正文/进程原始日志）。浏览器使用真实墙钟等待显式结果回传，避免 DOM 导出早于异步请求完成；回传只接受布尔与有界计数。失败输出具体 `errorCode`、`stage` 和可用的 `browserDiagnostics`，反馈最后一行脱敏结果即可。
 
-历史环境限制与首轮浏览器验收失败见 `docs/VALIDATION.md`。调整验收脚本为显式回传后，最终 11 项全部通过；实际慢读最大缓冲 65877 字节、消费停在 13 块，SIGTERM 退出 7ms。P6 使用受控 Provider，真实模型请求为 0；真实 DeepSeek 与交互 UI 的验收另由已接受的 P2/P4/P5 记录证明。
+历史环境限制与首轮浏览器验收失败见 `docs/archive/phase1-validation/VALIDATION.md`。调整验收脚本为显式回传后，最终 11 项全部通过；实际慢读最大缓冲 65877 字节、消费停在 13 块，SIGTERM 退出 7ms。P6 使用受控 Provider，真实模型请求为 0；真实 DeepSeek 与交互 UI 的验收另由已接受的 P2/P4/P5 记录证明。

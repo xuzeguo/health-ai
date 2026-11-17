@@ -1,10 +1,12 @@
 # HealthAI 二期需求设计文档
 
+> 历史设计文档：当前二期方向以 [`PHASE2_LEARNING_PLAN.md`](../../PHASE2_LEARNING_PLAN.md) 为准。本文件中的 OCR、报告产品、完整 workflow 和 AC-01…AC-21 不再是当前必做范围。
+
 - 文档编号：HAI-F02-PRD
 - 版本：1.2（测试前置与估算配套修订）
 - 修订日期：2026-11-16
 - 状态：待用户审查；尚未授权执行二期实验和开发
-- 配套文档：`docs/PHASE2_TECHNICAL_DESIGN.md`、`docs/PHASE2_DEVELOPMENT_PLAN.md`
+- 配套文档：`docs/archive/phase2-product-route/PHASE2_TECHNICAL_DESIGN.md`、`docs/archive/phase2-product-route/PHASE2_DEVELOPMENT_PLAN.md`
 
 ## 1. 目标与一期基线
 
@@ -144,16 +146,16 @@ P0 不通过时必须记录降级方案和受影响验收项。若替代供应�
 
 交付内容：本 PRD、技术设计、独立开发计划、P0 报告、ADR、版本化 Prompt/Schema、工具注册与执行、索引检索、HITL、工作流协议与界面、测试评测及演示报告。
 
-开发顺序与工时以 `docs/PHASE2_DEVELOPMENT_PLAN.md` 为唯一计划来源：23–30 个有效开发日，含约 20% 余量建议 28–36 日。先能力验证与契约，随后审核、工具、RAG、组合产品与验收；LangChain、SSE 和评测从基础阶段接入。
+开发顺序与工时以 `docs/archive/phase2-product-route/PHASE2_DEVELOPMENT_PLAN.md` 为唯一计划来源：23–30 个有效开发日，含约 20% 余量建议 28–36 日。先能力验证与契约，随后审核、工具、RAG、组合产品与验收；LangChain、SSE 和评测从基础阶段接入。
 
 当前只修订文档。用户审查通过前，不安装依赖、不编写实验或业务代码、不运行真实模型实验、不迁移真实数据库、不提交或推送 Git。
 
 ## 开发前测试与阶段放行要求（v1.2补充）
 
-严格执行 `docs/PHASE2_TEST_PLAN.md`：每阶段开发之前先冻结周全的测试条件、输入、预期、故障注入、隔离及证据要求；随后实现并执行测试。每阶段必须完成本阶段全部适用案例、累计全量离线测试、类型/构建及受影响真实能力/浏览器验证。必测失败或未执行不放行，先修复重测；不得等P6才集中补测。测试规格已在业务开发前独立编写，阶段开工前细化命令与fixtures，不将尚未执行的测试标为通过。
+严格执行 `docs/archive/phase2-product-route/PHASE2_TEST_PLAN.md`：每阶段开发之前先冻结周全的测试条件、输入、预期、故障注入、隔离及证据要求；随后实现并执行测试。每阶段必须完成本阶段全部适用案例、累计全量离线测试、类型/构建及受影响真实能力/浏览器验证。必测失败或未执行不放行，先修复重测；不得等P6才集中补测。测试规格已在业务开发前独立编写，阶段开工前细化命令与fixtures，不将尚未执行的测试标为通过。
 
 时间与Codex/应用模型token预算以开发计划v1.2为准；本轮仍待用户审查，不执行实验或开发。
 
 ## 当前执行状态（2026-11-17）
 
-用户已授权“开始/继续”，原文审查前禁止开发的描述是历史门槛，现已满足。F02-P0选定的本地macOS路径验证通过，117项离线测试、类型/构建和报告审计通过；详见 `docs/PHASE2_P0_STATUS.md`、`docs/PHASE2_DECISIONS.md`。初步选型为macOS Vision OCR、NaturalLanguage中文640维Embedding、SQLite小库精确向量检索、DeepSeek JSON与LangChain。只有合成工程样本，生产质量和业务AC留给P1–P6验证。后续阶段继续先测试条件、后实现、严格通过测试门槛，不自动提交推送。
+用户已授权“开始/继续”，原文审查前禁止开发的描述是历史门槛，现已满足。F02-P0选定的本地macOS路径验证通过，117项离线测试、类型/构建和报告审计通过；详见 `docs/archive/phase2-p0/PHASE2_P0_STATUS.md`、`docs/archive/phase2-product-route/PHASE2_DECISIONS.md`。初步选型为macOS Vision OCR、NaturalLanguage中文640维Embedding、SQLite小库精确向量检索、DeepSeek JSON与LangChain。只有合成工程样本，生产质量和业务AC留给P1–P6验证。后续阶段继续先测试条件、后实现、严格通过测试门槛，不自动提交推送。
